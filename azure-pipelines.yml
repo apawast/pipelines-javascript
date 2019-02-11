@@ -7,6 +7,7 @@ strategy:
     node_8_x:
       node_version: 8.x
       imageName: 'ubuntu-16.04'
+      imageName: 'macos-10.13'
     node_9_x:
       node_version: 9.x
       imageName: 'macos-10.13'
