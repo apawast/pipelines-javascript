@@ -9,17 +9,25 @@ strategy:
     windows:
       imageName: 'vs2017-win2016'
 
+strategy:
+  matrix:
+    node_8_x:
+      node_version: 8.x
+    node_9_x:
+      node_version: 9.x
+
 pool:
   vmImage: $(imageName)
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '8.x'
+    versionSpec: $(node_version)
 
 - script: |
     npm install
     npm test
+    gulp
 
 - task: PublishTestResults@2
   inputs:
