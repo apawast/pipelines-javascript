@@ -4,15 +4,15 @@ pool:
   vmImage:  $(imageName)
 strategy:
   matrix:
-    node_8_x:
+    node_8_x_linux:
       node_version: 8.x
-      matrix:
-        linux:
-          imageName: 'ubuntu-16.04'
-        mac:
-          imageName: 'macos-10.13'
-        windows:
-          imageName: 'vs2017-win2016'
+      imageName: 'ubuntu-16.04'
+    node_8_x_mac:
+      node_version: 8.x
+      imageName: 'macos-10.13'
+    node_8_x_windows:
+      node_version: 8.x
+      imageName: 'vs2017-win2016'
     node_9_x:
       node_version: 9.x
       imageName: 'macos-10.13'
