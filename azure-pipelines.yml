@@ -19,7 +19,6 @@ steps:
 - script: |
     npm install
     npm test
-    gulp
 
 - task: PublishTestResults@2
   inputs:
