@@ -9,7 +9,6 @@ strategy:
     windows:
       imageName: 'vs2017-win2016'
 
-strategy:
   matrix:
     node_8_x:
       node_version: 8.x
