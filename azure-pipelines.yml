@@ -37,7 +37,8 @@ steps:
 variables:
     azureSubscriptionEndpoint: Contoso
     azureContainerRegistry: contoso.azurecr.io
-steps:
+
+
 - task: Docker@1
   displayName: Container registry login
   inputs:
