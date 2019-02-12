@@ -34,14 +34,16 @@ steps:
     
 - script: docker build -f Dockerfile -t contoso/myjavascriptapp:$(Build.BuildId)
 
-variables:
-    azureSubscriptionEndpoint: Contoso
-    azureContainerRegistry: contoso.azurecr.io
-
-
 - task: Docker@1
   displayName: Container registry login
   inputs:
     azureSubscriptionEndpoint: $(azureSubscriptionEndpoint)
     azureContainerRegistry: $(azureContainerRegistry)
     command: login
+
+variables:
+    azureSubscriptionEndpoint: Contoso
+    azureContainerRegistry: contoso.azurecr.io
+
+
+
